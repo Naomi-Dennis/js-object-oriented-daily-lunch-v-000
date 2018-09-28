@@ -33,7 +33,7 @@ class Customer{
     return this.deliveries().map( (myDelivery) => { return myDelivery.meal() })
   }
   totalSpent(){
-    return this.meals().reduce( (accumulator, currentValue) => {  currentValue + accumulator.price})
+    return this.meals().reduce( (accumulator, currentValue) => {  currentValue + accumulator.price}, 0)
   }
 }
 
