@@ -30,11 +30,8 @@ class Customer{
     return store.deliveries.filter( (delivery) => { return delivery.customerId === this.id })
   }
   meals(){
-<<<<<<< HEAD
     return this.deliveries().map( (myDelivery) => { return myDelivery.meal() })
-=======
-    return this.deliveries()
->>>>>>> 5b25e3ab908d115e1806f0e844c07dbfaca08e68
+
   }
 }
 
@@ -44,7 +41,7 @@ class Meal{
     this.price = price
     addMeToStore.call(this)
   }
-<<<<<<< HEAD
+
  deliveries(){
     return store.deliveries.filter( (delivery) => { return delivery.mealId === this.id })
   }
@@ -54,8 +51,6 @@ class Meal{
   static byPrice(){
     return store.meals.sort((a,b) => { return b.price - a.price }) 
     }
-=======
->>>>>>> 5b25e3ab908d115e1806f0e844c07dbfaca08e68
 
 }
 class Delivery{
