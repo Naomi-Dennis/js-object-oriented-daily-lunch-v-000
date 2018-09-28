@@ -35,6 +35,7 @@ class Customer{
   totalSpent(){
     return this.meals().reduce( (accumulator, currentValue) => { return currentValue.price + accumulator; },0 )
   }
+  
 }
 
 class Meal{
