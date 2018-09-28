@@ -34,7 +34,7 @@ class Customer{
   }
   totalSpent(){
     let reducer = (acc, current) => {acc + current}
-    return this.meals().reduce( reducer )
+    console.log( this.meals().reduce( reducer ) )
   }
 }
 
