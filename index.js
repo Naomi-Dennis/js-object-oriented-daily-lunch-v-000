@@ -17,7 +17,7 @@ class Neighborhood{
   }
   meals(){
     let uniqueList = []
-    return this.deliveries.map( (delivery) => {return !uniqueList.includes(delivery.meal())  })
+    return this.deliveries.map( (delivery) => {if(!uniqueList.includes(delivery.meal())){ return delivery.meal() }  })
  }
 }
 class Customer{
