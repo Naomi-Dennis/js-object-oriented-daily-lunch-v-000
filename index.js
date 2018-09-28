@@ -16,7 +16,8 @@ class Neighborhood{
       return store.customers.filter( (customer) => { return customer.neighborhoodId === this.id })
   }
   meals(){
-    return this.deliveries
+    let uniqueList = []
+    return this.deliveries.map( (delivery) => {return !uniqueList.includes(delivery.meal())  })
  }
 }
 class Customer{
