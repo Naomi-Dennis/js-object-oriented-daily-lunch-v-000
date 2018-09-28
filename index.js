@@ -17,7 +17,7 @@ class Neighborhood{
   }
   meals(){
     let uniqueList = []
-     this.deliveries().map( (delivery) => {if(!uniqueList.includes(delivery.meal())){ return delivery.meal() }  })
+     this.deliveries().map( (delivery) => {if(!uniqueList.includes(delivery.meal())){ uniqueList.push(delivery.meal()); return delivery.meal() }  })
      console.log(uniqueList)
  }
 }
