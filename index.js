@@ -16,7 +16,7 @@ class Neighborhood{
       return store.customers.filter( (customer) => { return customer.neighborhoodId === this.id })
   }
   meals(){
-    return store.meals.filter( (meal) => { return meal.neighborhoodId === this.id })
+    return store.meals.every( (meal) => { (!this.deliveries().meals().includes(meal)) })
  }
 }
 class Customer{
