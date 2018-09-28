@@ -63,9 +63,6 @@ class Delivery{
     this.neighborhoodId = (neighborhood) ? neighborhood : 0
     this.id = store["deliveries"].push(this) - 1
   }
-  neighborhood(){
-      return store.neighborhoods.filter( (neighborhood) => { return neighborhood.neighborhoodId === this.id })
-  }
   meal(){
     return store.meals.find( (meal) => { return meal.id === this.mealId})
   }
